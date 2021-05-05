@@ -64,7 +64,7 @@ export const fetchNewHatebu = async (id) => {
   if (newest) {
     await fetchHatebuByDays(id, new Date(newest.published_at), 1);
   } else {
-    await fetchHatebuByDays(id, new Date(newest.published_at), 10);
+    await fetchHatebuByDays(id, new Date(), 10);
   }
 };
 
