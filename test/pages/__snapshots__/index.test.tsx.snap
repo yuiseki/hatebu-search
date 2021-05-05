@@ -11,6 +11,11 @@ exports[`Home page matches snapshot 1`] = `
       >
         Nextjs App with TypeScript, ESlint, Jest, Emotion, Tailwind and Twin
       </h1>
+      <button
+        class="css-1daw9jr-styles"
+      >
+        button
+      </button>
     </main>
   </div>
 </DocumentFragment>
