@@ -8,7 +8,7 @@ const feedUrl = (id, date) => {
 
 const dateToStr = (date: Date) => {
   const yearStr = date.getFullYear().toString();
-  const monthStr = ('0' + date.getMonth()).slice(-2).toString();
+  const monthStr = ('0' + date.getMonth() + 1).slice(-2).toString();
   const dateStr = ('0' + date.getDate()).slice(-2).toString();
   const dayStr = `${yearStr}${monthStr}${dateStr}`;
   return dayStr;
