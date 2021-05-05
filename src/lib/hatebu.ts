@@ -61,10 +61,16 @@ const fetchHatebuByDays = async (id, startDay, days) => {
 export const fetchNewHatebu = async (id) => {
   const newest = await newestHatebu(id);
   // TODO: 最新の日時から現在時刻まで取得するべき
-  await fetchHatebuByDays(id, new Date(newest.published_at), 1);
+  if (newest) {
+    await fetchHatebuByDays(id, new Date(newest.published_at), 1);
+  } else {
+    await fetchHatebuByDays(id, new Date(newest.published_at), 10);
+  }
 };
 
 export const fetchOldHatebu = async (id) => {
   const oldest = await oldestHatebu(id);
-  await fetchHatebuByDays(id, new Date(oldest.published_at), 20);
+  if (oldest) {
+    await fetchHatebuByDays(id, new Date(oldest.published_at), 20);
+  }
 };
