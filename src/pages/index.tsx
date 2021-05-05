@@ -7,7 +7,7 @@ const container = css`
   ${tw`mx-auto m-4 p-4 rounded bg-gray-400`}
 `;
 
-const Home = () => {
+export const Home = () => {
   const router = useRouter();
   const [id, setId] = useState('');
   return (
@@ -42,5 +42,3 @@ const Home = () => {
     </div>
   );
 };
-
-export default Home;
